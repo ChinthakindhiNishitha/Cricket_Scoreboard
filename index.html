@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Scoreboard - CBIT IT Department</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="institute">Chaitanya Bharathi Institute of Technology</div>
+            <div class="assignment">Department of IT - Enterprise Application Development</div>
+            <div class="assignment">Cricket Scoreboard Application</div>
+        </header>
+        
+        <div class="scoreboard">
+            <div class="team-score" id="teamScore">0/0</div>
+            <div class="overs" id="overs">0.0 Overs</div>
+            
+            <div class="players">
+                <div class="player active" id="rahul">
+                    <div class="player-name">Rahul</div>
+                    <div class="player-score" id="rahulScore">0*</div>
+                </div>
+                <div class="player" id="rohit">
+                    <div class="player-name">Rohit</div>
+                    <div class="player-score" id="rohitScore">0</div>
+                </div>
+            </div>
+            
+            <div class="score-update" id="scoreUpdate"></div>
+        </div>
+        
+        <div class="controls">
+            <button class="run-btn" onclick="addRuns(1)">1 Run</button>
+            <button class="run-btn" onclick="addRuns(2)">2 Runs</button>
+            <button class="run-btn" onclick="addRuns(3)">3 Runs</button>
+            <button class="run-btn" onclick="addRuns(4)">4</button>
+            <button class="run-btn" onclick="addRuns(6)">6</button>
+            <button class="wicket-btn" onclick="addWicket()">Wicket</button>
+            <button class="wicket-btn" onclick="addLBW()">LBW</button>
+            <button class="extra-btn" onclick="addWide()">Wide</button>
+            <button class="extra-btn" onclick="addNoBall()">No Ball</button>
+            <button class="special-btn" onclick="addFreeHit()">Free Hit</button>
+            <button class="extra-btn" onclick="addBye()">Bye</button>
+            <button class="extra-btn" onclick="addLegBye()">Leg Bye</button>
+            <button class="action-btn" onclick="switchStriker()">Switch Striker</button>
+            <button class="action-btn" onclick="resetScoreboard()">Reset</button>
+        </div>
+        
+        <div class="status" id="statusMessage">
+            Rahul is on strike. Game started!
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
